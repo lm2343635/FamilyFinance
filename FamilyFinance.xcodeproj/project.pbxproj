@@ -15,6 +15,15 @@
 		E407A9DB1BDE0D9500200713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E407A9D91BDE0D9500200713 /* LaunchScreen.storyboard */; };
 		E407A9E61BDE0D9500200713 /* FamilyFinanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E407A9E51BDE0D9500200713 /* FamilyFinanceTests.m */; };
 		E407A9F11BDE0D9500200713 /* FamilyFinanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E407A9F01BDE0D9500200713 /* FamilyFinanceUITests.m */; };
+		E407AA021BDE2F8B00200713 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E407AA011BDE2F8B00200713 /* CouchbaseLite.framework */; };
+		E407AA041BDE2FE000200713 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E407AA031BDE2FE000200713 /* libz.tbd */; };
+		E407AA061BDE2FE800200713 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E407AA051BDE2FE800200713 /* libsqlite3.tbd */; };
+		E407AA081BDE2FF200200713 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E407AA071BDE2FF200200713 /* SystemConfiguration.framework */; };
+		E407AA0A1BDE2FFC00200713 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E407AA091BDE2FFC00200713 /* Security.framework */; };
+		E407AA0C1BDE300400200713 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E407AA0B1BDE300400200713 /* CFNetwork.framework */; };
+		E407AA0F1BDE305100200713 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E407AA0E1BDE305100200713 /* User.m */; };
+		E407AA151BDE326100200713 /* AccountBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E407AA141BDE326100200713 /* AccountBook.m */; };
+		E407AA181BDE37C600200713 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = E407AA171BDE37C600200713 /* Record.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,18 @@
 		E407A9EC1BDE0D9500200713 /* FamilyFinanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyFinanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E407A9F01BDE0D9500200713 /* FamilyFinanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FamilyFinanceUITests.m; sourceTree = "<group>"; };
 		E407A9F21BDE0D9500200713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E407AA011BDE2F8B00200713 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLite.framework; path = FamilyFinance/CouchbaseLite.framework; sourceTree = "<group>"; };
+		E407AA031BDE2FE000200713 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E407AA051BDE2FE800200713 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E407AA071BDE2FF200200713 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E407AA091BDE2FFC00200713 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E407AA0B1BDE300400200713 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E407AA0D1BDE305100200713 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E407AA0E1BDE305100200713 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E407AA131BDE326100200713 /* AccountBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBook.h; sourceTree = "<group>"; };
+		E407AA141BDE326100200713 /* AccountBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBook.m; sourceTree = "<group>"; };
+		E407AA161BDE37C600200713 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		E407AA171BDE37C600200713 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E407AA0C1BDE300400200713 /* CFNetwork.framework in Frameworks */,
+				E407AA0A1BDE2FFC00200713 /* Security.framework in Frameworks */,
+				E407AA081BDE2FF200200713 /* SystemConfiguration.framework in Frameworks */,
+				E407AA021BDE2F8B00200713 /* CouchbaseLite.framework in Frameworks */,
+				E407AA061BDE2FE800200713 /* libsqlite3.tbd in Frameworks */,
+				E407AA041BDE2FE000200713 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +108,12 @@
 		E407A9BF1BDE0D9500200713 = {
 			isa = PBXGroup;
 			children = (
+				E407AA011BDE2F8B00200713 /* CouchbaseLite.framework */,
+				E407AA0B1BDE300400200713 /* CFNetwork.framework */,
+				E407AA091BDE2FFC00200713 /* Security.framework */,
+				E407AA071BDE2FF200200713 /* SystemConfiguration.framework */,
+				E407AA051BDE2FE800200713 /* libsqlite3.tbd */,
+				E407AA031BDE2FE000200713 /* libz.tbd */,
 				E407A9CA1BDE0D9500200713 /* FamilyFinance */,
 				E407A9E41BDE0D9500200713 /* FamilyFinanceTests */,
 				E407A9EF1BDE0D9500200713 /* FamilyFinanceUITests */,
@@ -101,6 +134,7 @@
 		E407A9CA1BDE0D9500200713 /* FamilyFinance */ = {
 			isa = PBXGroup;
 			children = (
+				E407AA001BDE27CF00200713 /* Model */,
 				E407A9CE1BDE0D9500200713 /* AppDelegate.h */,
 				E407A9CF1BDE0D9500200713 /* AppDelegate.m */,
 				E407A9D11BDE0D9500200713 /* ViewController.h */,
@@ -138,6 +172,19 @@
 				E407A9F21BDE0D9500200713 /* Info.plist */,
 			);
 			path = FamilyFinanceUITests;
+			sourceTree = "<group>";
+		};
+		E407AA001BDE27CF00200713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E407AA0D1BDE305100200713 /* User.h */,
+				E407AA0E1BDE305100200713 /* User.m */,
+				E407AA131BDE326100200713 /* AccountBook.h */,
+				E407AA141BDE326100200713 /* AccountBook.m */,
+				E407AA161BDE37C600200713 /* Record.h */,
+				E407AA171BDE37C600200713 /* Record.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E407AA0F1BDE305100200713 /* User.m in Sources */,
 				E407A9D31BDE0D9500200713 /* ViewController.m in Sources */,
+				E407AA151BDE326100200713 /* AccountBook.m in Sources */,
 				E407A9D01BDE0D9500200713 /* AppDelegate.m in Sources */,
+				E407AA181BDE37C600200713 /* Record.m in Sources */,
 				E407A9CD1BDE0D9500200713 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,8 +466,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FamilyFinance",
+				);
 				INFOPLIST_FILE = FamilyFinance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ut.FamilyFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -427,8 +483,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FamilyFinance",
+				);
 				INFOPLIST_FILE = FamilyFinance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ut.FamilyFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -501,6 +563,7 @@
 				E407A9F71BDE0D9500200713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E407A9F81BDE0D9500200713 /* Build configuration list for PBXNativeTarget "FamilyFinanceTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +572,7 @@
 				E407A9FA1BDE0D9500200713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E407A9FB1BDE0D9500200713 /* Build configuration list for PBXNativeTarget "FamilyFinanceUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +581,7 @@
 				E407A9FD1BDE0D9500200713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
