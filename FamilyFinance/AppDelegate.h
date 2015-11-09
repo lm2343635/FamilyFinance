@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CouchbaseLite/CouchbaseLite.h>
+
+#define DEBUG 1
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic, readonly) CBLDatabase *database;
+
+- (void)showMessage: (NSString *)message;
 
 @end
 

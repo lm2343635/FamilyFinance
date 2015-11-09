@@ -8,11 +8,15 @@
 
 #import <CouchbaseLite/CouchbaseLite.h>
 
+#define kUserDocType @"user"
+
 @interface User : CBLModel
 
 @property (readwrite) NSString *email;
 @property (readwrite) NSString *password;
 @property (readwrite) NSString *uname;
-@property (readwrite) NSSet *accountBooks;
+@property (readwrite) bool login;
+
++ (NSArray *) queryUsersInDataBase: (CBLDatabase *)database;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface Record : CBLModel
 
-@property (readwrite) 
+@property (readwrite) NSString *rname;
 
 @end

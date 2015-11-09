@@ -8,12 +8,15 @@
 
 #import <CouchbaseLite/CouchbaseLite.h>
 
+#define kAccountBookDocType @"accountBook"
+
 @class User;
 
 @interface AccountBook : CBLModel
 
 @property (readwrite) NSString *abname;
 @property (readwrite) User *owner;
-@property (readwrite) NSSet *members;
+
++ (NSArray *)queryAccountBooksInDatabase: (CBLDatabase *)database;
 
 @end

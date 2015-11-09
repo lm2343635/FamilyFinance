@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Classification.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSError *error;
+    _database=[[CBLManager sharedInstance] databaseNamed:@"database" error:&error];
+    if(error) {
+        NSLog(@"Cannot create database with an error : %@", [error description]);
+    }
+    
+    CBLQuery* query = [self.database createAllDocumentsQuery];
+    CBLQueryEnumerator* result = [query run: &error];
+    for (CBLQueryRow* row in result) {
+        NSLog(@"%@", row.document.properties);
+    }
     return YES;
 }
 
@@ -42,4 +53,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)showMessage:(NSString *)message {
+    UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Tips"
+                                                  message:message
+                                                 delegate:nil
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles: nil];
+    [alert show];
+}
 @end
