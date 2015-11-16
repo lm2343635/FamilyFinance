@@ -1,23 +1,23 @@
 //
-//  ClassificationsTableViewController.m
+//  ShopsTableViewController.m
 //  FamilyFinance
 //
-//  Created by 李大爷 on 11/1/15.
+//  Created by limeng on 11/16/15.
 //  Copyright © 2015 李大爷. All rights reserved.
 //
 
-#import "ClassificationsTableViewController.h"
+#import "ShopsTableViewController.h"
 #import "Util.h"
 #import "DaoManager.h"
 
-@interface ClassificationsTableViewController ()
+@interface ShopsTableViewController ()
 
 @end
 
-@implementation ClassificationsTableViewController {
+@implementation ShopsTableViewController {
     DaoManager *dao;
     User *loginedUser;
-    NSArray *classifications;
+    NSArray *shops;
 }
 
 - (void)viewDidLoad {
@@ -27,49 +27,47 @@
     }
     dao=[[DaoManager alloc] init];
     loginedUser=[dao.userDao findLogined];
-    classifications=[dao.classificationDao findByAccountBook:loginedUser.usingAccountBook];
+    shops=[dao.shopDao findByAccountBook:loginedUser.usingAccountBook];
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    return classifications.count;
+    return shops.count;
 }
-
+#pragma mark - UITableViewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"classification" forIndexPath:indexPath];
-    UILabel *cnameLabel=(UILabel *)[cell viewWithTag:0];
-    cnameLabel.text=[[classifications objectAtIndex:indexPath.row] cname];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shop"
+                                                            forIndexPath:indexPath];
+    UILabel *snameLabel=(UILabel *)[cell viewWithTag:0];
+    snameLabel.text=[[shops objectAtIndex:indexPath.row] sname];
     return cell;
 }
-
-#pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        Classification *classification=[classifications objectAtIndex:indexPath.row];
-        [classification deleteDocument:nil];
-        classifications=[dao.classificationDao findByAccountBook:loginedUser.usingAccountBook];
+        Shop *shop=[shops objectAtIndex:indexPath.row];
+        [shop deleteDocument:nil];
+        shops=[dao.shopDao findByAccountBook:loginedUser.usingAccountBook];
         [self.tableView reloadData];
     }
 }
 
 #pragma mark - Action
-- (IBAction)addClassification:(id)sender {
+- (IBAction)addShop:(id)sender {
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    [Util showPlainTextInputAlertWithTitle:@"New Classification"
-                                andMessage:@"Input the name of new classification."
+    [Util showPlainTextInputAlertWithTitle:@"New Shop"
+                                andMessage:@"Input the name of new shop."
                              andButtonName:@"Create"
                                andDelegate:self];
 }
@@ -80,14 +78,13 @@
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     if(buttonIndex>0) {
-        NSString *cname=[[alertView textFieldAtIndex:0] text];
-        if(cname.length>0) { 
-             [dao.classificationDao saveWithCname:cname
-                                    inAccountBook:loginedUser.usingAccountBook];
-            classifications=[dao.classificationDao findByAccountBook:loginedUser.usingAccountBook];
+        NSString *sname=[[alertView textFieldAtIndex:0] text];
+        if(sname.length>0) {
+            [dao.shopDao saveWithSname:sname
+                        andAccountBook:loginedUser.usingAccountBook];
+            shops=[dao.shopDao findByAccountBook:loginedUser.usingAccountBook];
             [self.tableView reloadData];
         }
     }
 }
-
 @end

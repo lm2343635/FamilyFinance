@@ -17,6 +17,4 @@
 @property (readwrite) NSString *abname;
 @property (readwrite) User *owner;
 
-+ (NSArray *)queryAccountBooksInDatabase: (CBLDatabase *)database;
-
 @end

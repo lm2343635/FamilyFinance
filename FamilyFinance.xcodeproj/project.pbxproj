@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40413FD1BF9A7C4001D029E /* DaoTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E40413FC1BF9A7C4001D029E /* DaoTemplate.m */; };
+		E40414001BF9A861001D029E /* UserDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E40413FF1BF9A861001D029E /* UserDao.m */; };
+		E40414041BF9AB70001D029E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = E40414031BF9AB70001D029E /* Util.m */; };
 		E407A9CD1BDE0D9500200713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E407A9CC1BDE0D9500200713 /* main.m */; };
 		E407A9D01BDE0D9500200713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E407A9CF1BDE0D9500200713 /* AppDelegate.m */; };
 		E407A9D31BDE0D9500200713 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E407A9D21BDE0D9500200713 /* ViewController.m */; };
@@ -24,6 +27,15 @@
 		E407AA0F1BDE305100200713 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E407AA0E1BDE305100200713 /* User.m */; };
 		E407AA151BDE326100200713 /* AccountBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E407AA141BDE326100200713 /* AccountBook.m */; };
 		E407AA181BDE37C600200713 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = E407AA171BDE37C600200713 /* Record.m */; };
+		E4495BE11BF9B4310010EEE1 /* AccountBookDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BE01BF9B4310010EEE1 /* AccountBookDao.m */; };
+		E4495BE41BF9B6630010EEE1 /* DaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BE31BF9B6630010EEE1 /* DaoManager.m */; };
+		E4495BE71BF9CED40010EEE1 /* ClassificationDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BE61BF9CED40010EEE1 /* ClassificationDao.m */; };
+		E4495BEA1BF9CEE60010EEE1 /* AccountDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BE91BF9CEE60010EEE1 /* AccountDao.m */; };
+		E4495BED1BF9CEF70010EEE1 /* ShopDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BEC1BF9CEF70010EEE1 /* ShopDao.m */; };
+		E4495BF01BF9CF1C0010EEE1 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BEF1BF9CF1C0010EEE1 /* Account.m */; };
+		E4495BF31BF9CF290010EEE1 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BF21BF9CF290010EEE1 /* Shop.m */; };
+		E4495BF61BF9DAE30010EEE1 /* ShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BF51BF9DAE30010EEE1 /* ShopsTableViewController.m */; };
+		E4495BF91BF9DAF10010EEE1 /* AccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4495BF81BF9DAF10010EEE1 /* AccountsTableViewController.m */; };
 		E47AB5BE1BE5EE63003A25D7 /* Classification.m in Sources */ = {isa = PBXBuildFile; fileRef = E47AB5BD1BE5EE63003A25D7 /* Classification.m */; };
 		E47AB5C21BE5F141003A25D7 /* ClassificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47AB5C11BE5F141003A25D7 /* ClassificationsTableViewController.m */; };
 		E4C5EB221BF0781B00DB4D81 /* AccountBooksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C5EB211BF0781B00DB4D81 /* AccountBooksTableViewController.m */; };
@@ -49,6 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E40413FB1BF9A7C4001D029E /* DaoTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaoTemplate.h; sourceTree = "<group>"; };
+		E40413FC1BF9A7C4001D029E /* DaoTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaoTemplate.m; sourceTree = "<group>"; };
+		E40413FE1BF9A861001D029E /* UserDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDao.h; sourceTree = "<group>"; };
+		E40413FF1BF9A861001D029E /* UserDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDao.m; sourceTree = "<group>"; };
+		E40414021BF9AB70001D029E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		E40414031BF9AB70001D029E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		E407A9C81BDE0D9500200713 /* FamilyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E407A9CC1BDE0D9500200713 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E407A9CE1BDE0D9500200713 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +95,24 @@
 		E407AA141BDE326100200713 /* AccountBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBook.m; sourceTree = "<group>"; };
 		E407AA161BDE37C600200713 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
 		E407AA171BDE37C600200713 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		E4495BDF1BF9B4310010EEE1 /* AccountBookDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountBookDao.h; sourceTree = "<group>"; };
+		E4495BE01BF9B4310010EEE1 /* AccountBookDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountBookDao.m; sourceTree = "<group>"; };
+		E4495BE21BF9B6630010EEE1 /* DaoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaoManager.h; sourceTree = "<group>"; };
+		E4495BE31BF9B6630010EEE1 /* DaoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaoManager.m; sourceTree = "<group>"; };
+		E4495BE51BF9CED40010EEE1 /* ClassificationDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationDao.h; sourceTree = "<group>"; };
+		E4495BE61BF9CED40010EEE1 /* ClassificationDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationDao.m; sourceTree = "<group>"; };
+		E4495BE81BF9CEE60010EEE1 /* AccountDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDao.h; sourceTree = "<group>"; };
+		E4495BE91BF9CEE60010EEE1 /* AccountDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDao.m; sourceTree = "<group>"; };
+		E4495BEB1BF9CEF70010EEE1 /* ShopDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDao.h; sourceTree = "<group>"; };
+		E4495BEC1BF9CEF70010EEE1 /* ShopDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDao.m; sourceTree = "<group>"; };
+		E4495BEE1BF9CF1C0010EEE1 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		E4495BEF1BF9CF1C0010EEE1 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		E4495BF11BF9CF290010EEE1 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		E4495BF21BF9CF290010EEE1 /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
+		E4495BF41BF9DAE30010EEE1 /* ShopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopsTableViewController.h; sourceTree = "<group>"; };
+		E4495BF51BF9DAE30010EEE1 /* ShopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopsTableViewController.m; sourceTree = "<group>"; };
+		E4495BF71BF9DAF10010EEE1 /* AccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsTableViewController.h; sourceTree = "<group>"; };
+		E4495BF81BF9DAF10010EEE1 /* AccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsTableViewController.m; sourceTree = "<group>"; };
 		E47AB5BC1BE5EE63003A25D7 /* Classification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classification.h; sourceTree = "<group>"; };
 		E47AB5BD1BE5EE63003A25D7 /* Classification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classification.m; sourceTree = "<group>"; };
 		E47AB5C01BE5F141003A25D7 /* ClassificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationsTableViewController.h; sourceTree = "<group>"; };
@@ -120,6 +156,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E40413FA1BF9A787001D029E /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				E4495BE21BF9B6630010EEE1 /* DaoManager.h */,
+				E4495BE31BF9B6630010EEE1 /* DaoManager.m */,
+				E40413FB1BF9A7C4001D029E /* DaoTemplate.h */,
+				E40413FC1BF9A7C4001D029E /* DaoTemplate.m */,
+				E40413FE1BF9A861001D029E /* UserDao.h */,
+				E40413FF1BF9A861001D029E /* UserDao.m */,
+				E4495BDF1BF9B4310010EEE1 /* AccountBookDao.h */,
+				E4495BE01BF9B4310010EEE1 /* AccountBookDao.m */,
+				E4495BE51BF9CED40010EEE1 /* ClassificationDao.h */,
+				E4495BE61BF9CED40010EEE1 /* ClassificationDao.m */,
+				E4495BE81BF9CEE60010EEE1 /* AccountDao.h */,
+				E4495BE91BF9CEE60010EEE1 /* AccountDao.m */,
+				E4495BEB1BF9CEF70010EEE1 /* ShopDao.h */,
+				E4495BEC1BF9CEF70010EEE1 /* ShopDao.m */,
+			);
+			name = Dao;
+			sourceTree = "<group>";
+		};
+		E40414011BF9AB4E001D029E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E40414021BF9AB70001D029E /* Util.h */,
+				E40414031BF9AB70001D029E /* Util.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		E407A9BF1BDE0D9500200713 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +215,8 @@
 		E407A9CA1BDE0D9500200713 /* FamilyFinance */ = {
 			isa = PBXGroup;
 			children = (
+				E40414011BF9AB4E001D029E /* Util */,
+				E40413FA1BF9A787001D029E /* Dao */,
 				E47AB5BF1BE5F118003A25D7 /* Settings */,
 				E407AA001BDE27CF00200713 /* Model */,
 				E407A9CE1BDE0D9500200713 /* AppDelegate.h */,
@@ -201,6 +269,10 @@
 				E407AA171BDE37C600200713 /* Record.m */,
 				E47AB5BC1BE5EE63003A25D7 /* Classification.h */,
 				E47AB5BD1BE5EE63003A25D7 /* Classification.m */,
+				E4495BEE1BF9CF1C0010EEE1 /* Account.h */,
+				E4495BEF1BF9CF1C0010EEE1 /* Account.m */,
+				E4495BF11BF9CF290010EEE1 /* Shop.h */,
+				E4495BF21BF9CF290010EEE1 /* Shop.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -208,10 +280,14 @@
 		E47AB5BF1BE5F118003A25D7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				E47AB5C01BE5F141003A25D7 /* ClassificationsTableViewController.h */,
-				E47AB5C11BE5F141003A25D7 /* ClassificationsTableViewController.m */,
 				E4C5EB201BF0781B00DB4D81 /* AccountBooksTableViewController.h */,
 				E4C5EB211BF0781B00DB4D81 /* AccountBooksTableViewController.m */,
+				E4495BF71BF9DAF10010EEE1 /* AccountsTableViewController.h */,
+				E4495BF81BF9DAF10010EEE1 /* AccountsTableViewController.m */,
+				E47AB5C01BE5F141003A25D7 /* ClassificationsTableViewController.h */,
+				E47AB5C11BE5F141003A25D7 /* ClassificationsTableViewController.m */,
+				E4495BF41BF9DAE30010EEE1 /* ShopsTableViewController.h */,
+				E4495BF51BF9DAE30010EEE1 /* ShopsTableViewController.m */,
 				E4C5EB231BF0812F00DB4D81 /* SignupViewController.h */,
 				E4C5EB241BF0812F00DB4D81 /* SignupViewController.m */,
 				E4C5EB261BF0813A00DB4D81 /* UserViewController.h */,
@@ -354,16 +430,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				E407AA0F1BDE305100200713 /* User.m in Sources */,
+				E4495BF61BF9DAE30010EEE1 /* ShopsTableViewController.m in Sources */,
 				E407A9D31BDE0D9500200713 /* ViewController.m in Sources */,
+				E4495BE71BF9CED40010EEE1 /* ClassificationDao.m in Sources */,
 				E407AA151BDE326100200713 /* AccountBook.m in Sources */,
 				E4C5EB221BF0781B00DB4D81 /* AccountBooksTableViewController.m in Sources */,
 				E4C5EB251BF0812F00DB4D81 /* SignupViewController.m in Sources */,
+				E4495BEA1BF9CEE60010EEE1 /* AccountDao.m in Sources */,
+				E40414041BF9AB70001D029E /* Util.m in Sources */,
+				E4495BE41BF9B6630010EEE1 /* DaoManager.m in Sources */,
 				E407A9D01BDE0D9500200713 /* AppDelegate.m in Sources */,
+				E40413FD1BF9A7C4001D029E /* DaoTemplate.m in Sources */,
 				E407AA181BDE37C600200713 /* Record.m in Sources */,
 				E4C5EB281BF0813A00DB4D81 /* UserViewController.m in Sources */,
+				E4495BF01BF9CF1C0010EEE1 /* Account.m in Sources */,
+				E4495BF31BF9CF290010EEE1 /* Shop.m in Sources */,
+				E40414001BF9A861001D029E /* UserDao.m in Sources */,
+				E4495BED1BF9CEF70010EEE1 /* ShopDao.m in Sources */,
 				E47AB5C21BE5F141003A25D7 /* ClassificationsTableViewController.m in Sources */,
 				E47AB5BE1BE5EE63003A25D7 /* Classification.m in Sources */,
+				E4495BF91BF9DAF10010EEE1 /* AccountsTableViewController.m in Sources */,
 				E407A9CD1BDE0D9500200713 /* main.m in Sources */,
+				E4495BE11BF9B4310010EEE1 /* AccountBookDao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

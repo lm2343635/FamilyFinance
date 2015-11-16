@@ -7,15 +7,16 @@
 //
 
 #import "SignupViewController.h"
-#import "AppDelegate.h"
-#import "User.h"
+#import "Util.h"
+#import "UserDao.h"
+
 
 @interface SignupViewController ()
 
 @end
 
 @implementation SignupViewController {
-    CBLDatabase *database;
+
 }
 
 - (void)viewDidLoad {
@@ -23,24 +24,8 @@
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    AppDelegate *delegate=[[UIApplication sharedApplication] delegate];
-    database=delegate.database;
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)submit:(id)sender {
     if(DEBUG) {
@@ -53,22 +38,10 @@
     if ([email isEqualToString:@""]||[username isEqualToString:@""]||
         [password isEqualToString:@""]||[repeatPassword isEqualToString:@""]||
         ![password isEqualToString:repeatPassword]) {
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Tips"
-                                                      message:@"User information incorrect!"
-                                                     delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles: nil];
-        [alert show];
+        [Util showAlert:@"User information incorrect!"];
     } else {
-        User *user=[User modelForNewDocumentInDatabase:database];
-        user.email=email;
-        user.uname=username;
-        user.password=password;
-        user.login=false;
-        NSError *error;
-        if(![user save:&error]) {
-            NSLog(@"Error: %@", error.localizedDescription);
-        }
+        UserDao *userDao=[[UserDao alloc] init];
+        [userDao saveWithEmail:email andUname:username andPassword:password];
         [self.navigationController popViewControllerAnimated:YES];
     }
     

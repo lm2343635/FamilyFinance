@@ -10,12 +10,12 @@
 
 #define kClassificationDocType @"classification"
 
+@class AccountBook;
 @interface Classification : CBLModel
 
 @property (readwrite) NSString *cname;
 @property (readwrite) NSNumber *cin;
 @property (readwrite) NSNumber *cout;
-
-+(CBLQuery *)queryClassificationsInDatabase: (CBLDatabase *)database;
+@property (readwrite) AccountBook *accountBook;
 
 @end

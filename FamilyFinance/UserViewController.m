@@ -7,15 +7,15 @@
 //
 
 #import "UserViewController.h"
-#import "AppDelegate.h"
-#import "User.h"
+#import "Util.h"
+#import "UserDao.h"
 
 @interface UserViewController ()
 
 @end
 
 @implementation UserViewController {
-    AppDelegate *delegate;
+
 }
 
 - (void)viewDidLoad {
@@ -23,23 +23,7 @@
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    delegate=[[UIApplication sharedApplication] delegate];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - Action
 
@@ -49,14 +33,12 @@
     }
     NSString *email=self.emailTextField.text;
     NSString *password=self.passwordTextField.text;
-    NSArray *users=[User queryUsersInDataBase:delegate.database];
-    for(User * user in users) {
-        if([user.email isEqualToString:email]&&[user.password isEqualToString:password]) {
-            user.login=true;
-            [user save:nil];
-            [delegate showMessage:@"Login success!"];
-            break;
-        }
+    UserDao *userDao=[[UserDao alloc] init];
+    User *user=[userDao findByEmail:email];
+    if([user.password isEqualToString:password]) {
+        user.login=true;
+        [user save:nil];
+        [Util showAlert:@"Login success!"];
     }
 }
 @end

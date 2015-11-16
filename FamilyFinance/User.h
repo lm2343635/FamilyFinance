@@ -10,13 +10,13 @@
 
 #define kUserDocType @"user"
 
+@class AccountBook;
 @interface User : CBLModel
 
 @property (readwrite) NSString *email;
 @property (readwrite) NSString *password;
 @property (readwrite) NSString *uname;
 @property (readwrite) bool login;
-
-+ (NSArray *) queryUsersInDataBase: (CBLDatabase *)database;
+@property (readwrite) AccountBook *usingAccountBook;
 
 @end

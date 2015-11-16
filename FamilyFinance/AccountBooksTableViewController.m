@@ -7,16 +7,16 @@
 //
 
 #import "AccountBooksTableViewController.h"
-#import "AppDelegate.h"
-#import "User.h"
-#import "AccountBook.h"
+#import "DaoManager.h"
+#import "Util.h"
 
 @interface AccountBooksTableViewController ()
 
 @end
 
 @implementation AccountBooksTableViewController {
-    AppDelegate *delegate;
+    DaoManager *dao;
+    User *loginedUser;
     NSArray *accountBooks;
 }
 
@@ -25,8 +25,9 @@
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    delegate=[[UIApplication sharedApplication] delegate];
-    accountBooks=[AccountBook queryAccountBooksInDatabase:delegate.database];
+    dao=[[DaoManager alloc] init];
+    loginedUser=[dao.userDao findLogined];
+    accountBooks=[dao.accountBookDao findByUser:loginedUser];
 }
 
 #pragma mark - UITableViewDataSoure 
@@ -57,9 +58,18 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         AccountBook *accountBook=[accountBooks objectAtIndex:indexPath.row];
         [accountBook deleteDocument:nil];
-        accountBooks=[AccountBook queryAccountBooksInDatabase:delegate.database];
+        accountBooks=[dao.accountBookDao findByUser:loginedUser];
         [self.tableView reloadData];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+    loginedUser.usingAccountBook=[accountBooks objectAtIndex:indexPath.row];
+    [loginedUser save:nil];
+    [Util showAlert: [NSString stringWithFormat:@"Using Account Book set as %@", loginedUser.usingAccountBook.abname]];
 }
 
 #pragma mark - Action
@@ -67,13 +77,10 @@
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
-    UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"New Account Book"
-                                                  message:@"Input the name of new account book."
-                                                 delegate:self
-                                        cancelButtonTitle:@"Cancel"
-                                        otherButtonTitles:@"Create", nil];
-    alert.alertViewStyle=UIAlertViewStylePlainTextInput;
-    [alert show];
+    [Util showPlainTextInputAlertWithTitle:@"New Account Book"
+                                andMessage:@"Input the name of new account book."
+                             andButtonName:@"Create"
+                               andDelegate:self];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -83,22 +90,9 @@
     if(buttonIndex>0) {
         NSString *abname=[[alertView textFieldAtIndex:0] text];
         if(abname.length>0) {
-            NSArray *users=[User queryUsersInDataBase:delegate.database];
-            User *usingUser;
-            for(User *user in users) {
-                if(user.login==true) {
-                    usingUser=user;
-                    break;
-                }
-            }
-            AccountBook *accountBook=[AccountBook modelForNewDocumentInDatabase:delegate.database];
-            accountBook.abname=abname;
-            accountBook.owner=usingUser;
-            NSError *error;
-            if(![accountBook save:&error]) {
-                NSLog(@"Error: %@", error.localizedDescription);
-            }
-            accountBooks=[AccountBook queryAccountBooksInDatabase:delegate.database];
+            [dao.accountBookDao saveWithAbname:abname
+                                       forUser:loginedUser];
+            accountBooks=[dao.accountBookDao findByUser:loginedUser];
             [self.tableView reloadData];
         }
     }
