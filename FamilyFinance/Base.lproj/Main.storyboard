@@ -667,25 +667,285 @@
             </objects>
             <point key="canvasLocation" x="600" y="1276"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="K0M-r2-07x">
+        <!--Family Finance-->
+        <scene sceneID="x58-3s-dAa">
             <objects>
-                <viewController id="hUl-oQ-wyy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uMN-ov-Y7n"/>
-                        <viewControllerLayoutGuide type="bottom" id="MPS-fj-VBO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RPU-2U-LBM">
+                <tableViewController id="W8x-VL-37e" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m1e-NB-hfa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Main" image="tab_main" id="Too-Q9-9It"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mk9-DY-Vq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3ZA-hY-Qui">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ZA-hY-Qui" id="nYC-uR-0gB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W8x-VL-37e" id="9wN-6S-R43"/>
+                            <outlet property="delegate" destination="W8x-VL-37e" id="RD3-9U-r5C"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Family Finance" id="4X2-Ee-dn8">
+                        <barButtonItem key="backBarButtonItem" id="0vj-jn-809"/>
+                        <barButtonItem key="leftBarButtonItem" title="Me" id="HuH-JA-mTl"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cIk-gn-Yph">
+                            <connections>
+                                <segue destination="Vxr-Am-ob8" kind="push" id="oo3-uT-JLj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uP6-n2-PuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="-87"/>
+            <point key="canvasLocation" x="1605" y="-1653"/>
+        </scene>
+        <!--Add a Record-->
+        <scene sceneID="Lo4-ha-671">
+            <objects>
+                <viewController id="Vxr-Am-ob8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OUo-PR-84M"/>
+                        <viewControllerLayoutGuide type="bottom" id="5he-wy-02J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fKL-jP-kWg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Record Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-Vg-v6r">
+                                <rect key="frame" x="20" y="82" width="560" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pO4-42-EsX">
+                                <rect key="frame" x="20" y="134" width="560" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faM-JT-7ou">
+                                <rect key="frame" x="20" y="197" width="102" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0R-Q6-cft">
+                                <rect key="frame" x="20" y="249" width="64" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wi-nc-wR9">
+                                <rect key="frame" x="20" y="301" width="40" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F84-zD-19D">
+                                <rect key="frame" x="140" y="186" width="440" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.91764705882352937" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Click to select classification">
+                                    <color key="titleColor" red="0.67843137254901964" green="0.67450980392156867" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JZt-n6-aDf" kind="push" id="94a-4q-Dnp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-xm-q2R">
+                                <rect key="frame" x="140" y="290" width="440" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.91764705879999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Click to select shop">
+                                    <color key="titleColor" red="0.67843137249999996" green="0.67450980390000004" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="EA0-xq-0f1" kind="push" id="iFG-l4-GnD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBh-0a-5Yg">
+                                <rect key="frame" x="140" y="238" width="440" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.91764705879999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Click to select account">
+                                    <color key="titleColor" red="0.67843137249999996" green="0.67450980390000004" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="l05-8d-mUv" kind="push" id="zxd-Sq-gL6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="PBh-0a-5Yg" secondAttribute="trailing" id="0vf-km-AxS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uri-xm-q2R" secondAttribute="trailing" id="4WW-dV-tYs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pO4-42-EsX" secondAttribute="trailing" id="Cjn-I8-L3i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EiU-Vg-v6r" secondAttribute="trailing" id="EKb-iT-Ynd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F84-zD-19D" secondAttribute="trailing" id="MSC-YW-Ekf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Record" id="kNH-KT-Syz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CeT-Br-Bvc"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffi-ta-N0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="-1653"/>
+        </scene>
+        <!--Select a Classification-->
+        <scene sceneID="AGQ-bg-SyZ">
+            <objects>
+                <tableViewController id="JZt-n6-aDf" customClass="SelectClassificationTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jCK-Pn-ExL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H90-Qv-hgr">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H90-Qv-hgr" id="XmO-7I-pkF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JZt-n6-aDf" id="Wss-zk-zIG"/>
+                            <outlet property="delegate" destination="JZt-n6-aDf" id="qLS-Gn-QgU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select a Classification" id="aPz-5a-5lh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIJ-6e-aOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200" y="-2414"/>
+        </scene>
+        <!--Select an Account-->
+        <scene sceneID="Yf0-Zv-u4w">
+            <objects>
+                <tableViewController id="l05-8d-mUv" customClass="SelectAccountTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ody-n7-hk0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IVg-eN-ksB">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IVg-eN-ksB" id="a4P-Ce-hem">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="l05-8d-mUv" id="krO-aY-Iwt"/>
+                            <outlet property="delegate" destination="l05-8d-mUv" id="B1M-oj-Qnl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select an Account" id="SMA-1j-0ad"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMl-lL-M2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200" y="-1737"/>
+        </scene>
+        <!--Select a Shop-->
+        <scene sceneID="5TF-rd-wvo">
+            <objects>
+                <tableViewController id="EA0-xq-0f1" customClass="SelectShopTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rdr-nT-eBN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uhn-Mz-5OX">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uhn-Mz-5OX" id="rMb-Ld-5Eb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EA0-xq-0f1" id="kik-qp-fbH"/>
+                            <outlet property="delegate" destination="EA0-xq-0f1" id="PzR-3U-tYc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select a Shop" id="xZs-7w-IwX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dr-ga-dp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200" y="-1065"/>
+        </scene>
+        <!--Family Finance-->
+        <scene sceneID="9d6-Ok-rQQ">
+            <objects>
+                <navigationController title="Family Finance" id="qDH-z5-R1P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main" image="tab_main" id="dFD-YR-khd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QXY-mz-4mW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W8x-VL-37e" kind="relationship" relationship="rootViewController" id="yaR-fU-J2c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2RJ-0K-8G7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="-895"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="16b-wi-50f">
@@ -698,7 +958,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hUl-oQ-wyy" kind="relationship" relationship="viewControllers" id="ZYZ-hB-fnv"/>
+                        <segue destination="qDH-z5-R1P" kind="relationship" relationship="viewControllers" id="NGY-du-iBu"/>
                         <segue destination="oKC-ty-aKD" kind="relationship" relationship="viewControllers" id="boG-z0-wIA"/>
                         <segue destination="qt0-1p-TEO" kind="relationship" relationship="viewControllers" id="2vb-Td-Tt2"/>
                     </connections>
