@@ -12,6 +12,7 @@
 #import "ClassificationDao.h"
 #import "AccountDao.h"
 #import "ShopDao.h"
+#import "RecordDao.h"
 
 @interface DaoManager : NSObject
 
@@ -20,6 +21,7 @@
 @property (strong, nonatomic) ClassificationDao *classificationDao;
 @property (strong, nonatomic) AccountDao *accountDao;
 @property (strong, nonatomic) ShopDao *shopDao;
+@property (strong, nonatomic) RecordDao *recordDao;
 
 
 @end

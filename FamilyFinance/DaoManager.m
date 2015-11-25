@@ -20,6 +20,7 @@
     self.classificationDao=[[ClassificationDao alloc] init];
     self.accountDao=[[AccountDao alloc] init];
     self.shopDao=[[ShopDao alloc] init];
+    self.recordDao=[[RecordDao alloc] init];
     return self;
 }
 

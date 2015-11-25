@@ -14,6 +14,7 @@
 #import "Classification.h"
 #import "Account.h"
 #import "Shop.h"
+#import "Record.h"
 
 @interface DaoTemplate : NSObject
 

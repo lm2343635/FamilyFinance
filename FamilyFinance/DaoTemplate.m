@@ -37,8 +37,9 @@
             object=[Account modelForDocument:row.document];
         } else if([daoClassName isEqualToString:@"ShopDao"]) {
             object=[Shop modelForDocument:row.document];
+        } else if([daoClassName isEqualToString:@"RecordDao"]) {
+            object=[Record modelForDocument:row.document];
         }
-
         [array addObject:object];
     }
     return array;

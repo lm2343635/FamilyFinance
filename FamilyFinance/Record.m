@@ -10,4 +10,10 @@
 
 @implementation Record
 
+@dynamic rname, time, amount, classification, account, shop, user, accountBook;
+
+- (void)awakeFromInitializer {
+    self.type=kRecordDocType;
+}
+
 @end

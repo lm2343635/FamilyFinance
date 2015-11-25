@@ -1,5 +1,5 @@
 //
-//  SelectShopTableViewController.h
+//  MainTableViewController.h
 //  FamilyFinance
 //
 //  Created by limeng on 11/25/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectShopTableViewController : UITableViewController
+@interface MainTableViewController : UITableViewController
 
 @end
